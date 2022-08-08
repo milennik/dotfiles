@@ -131,7 +131,7 @@ return packer.startup(function(use)
   -- Git
   use  { "tpope/vim-fugitive" }
 
-  -- Octo - Git PR 
+  -- Octo - Git PR
   use   {
     'pwntester/octo.nvim',
     requires = {
@@ -146,6 +146,27 @@ return packer.startup(function(use)
 
   -- Mason - LSP Installer
   use { "williamboman/mason.nvim" }
+
+  -- Comment code
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+  }
+
+  -- Flash cursor
+  use { "DanilaMihailov/beacon.nvim" }
+
+  -- Show hex colors
+  use {
+    'NvChad/nvim-colorizer.lua',
+    config = function()
+        require('colorizer').setup()
+    end
+  }
+
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

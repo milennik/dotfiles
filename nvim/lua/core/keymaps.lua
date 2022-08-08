@@ -75,8 +75,11 @@ map('n', '<C-e>', ':HopWord<CR>')          -- open/close
 -- Fzf
 map('n', '<C-f>', ":lua require('fzf-lua').files()<cr>")          -- Fzf files
 map('n', '<C-a>', ":lua require('fzf-lua').grep()<cr>")          -- Fzf grep
-map('n', '<C-x>', ":lua require('fzf-lua').grep_cword()<cr>")          -- Fzf grep word
+map('n', '<C-g>', ":lua require('fzf-lua').grep_cword()<cr>")          -- Fzf grep word
 
 -- Copy file's relative path
 
 map('n', '<C-c>', ":let @* = fnamemodify(expand('%'), ':~:.')<cr>")
+map('n', '<C-y>', ":lua require('plugins/master-diff').diff_with_master()<cr>")
+map('n', '<C-o>', ":Gvdiffsplit master<cr>")
+map('n', '<C-b>', ":Telescope buffers<cr>")
