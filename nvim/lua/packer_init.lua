@@ -166,7 +166,8 @@ return packer.startup(function(use)
     end
   }
 
-
+  -- Git diff
+  use { "milennik/gitdiff.nvim" }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

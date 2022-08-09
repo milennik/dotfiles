@@ -80,6 +80,7 @@ map('n', '<C-g>', ":lua require('fzf-lua').grep_cword()<cr>")          -- Fzf gr
 -- Copy file's relative path
 
 map('n', '<C-c>', ":let @* = fnamemodify(expand('%'), ':~:.')<cr>")
-map('n', '<C-y>', ":lua require('plugins/master-diff').diff_with_master()<cr>")
-map('n', '<C-o>', ":Gvdiffsplit master<cr>")
+map('n', '<C-y>', ":lua require('gitdiff').diff('master')<cr>")
+map('n', '<C-[>', ":lua require('gitdiff').diff()<cr>")
+map('n', '<C-p>', ":Gvdiffsplit master<cr>")
 map('n', '<C-b>', ":Telescope buffers<cr>")
