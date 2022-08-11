@@ -169,6 +169,18 @@ return packer.startup(function(use)
   -- Git diff
   use { "milennik/gitdiff.nvim" }
 
+  -- Scrollbar
+  use{
+    "petertriho/nvim-scrollbar",
+    config=function()
+      require('scrollbar').setup()
+    end
+  }
+
+  -- Diff view
+  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
