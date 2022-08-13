@@ -11,7 +11,7 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -- Change leader to a comma
-vim.g.mapleader = ' '
+vim.g.mapleader = ','
 
 -----------------------------------------------------------
 -- Neovim shortcuts
@@ -47,11 +47,11 @@ map('n', '<C-l>', '<C-w>l')
 map('n', '<leader>r', ':so %<CR>')
 
 -- Fast saving with <leader> and s
-map('n', '<leader>s', ':w<CR>')
-map('i', '<leader>s', '<C-c>:w<CR>')
+-- map('n', '<leader>s', ':w<CR>')
+-- map('i', '<leader>s', '<C-c>:w<CR>')
 
 -- Close all windows and exit from Neovim with <leader> and q
-map('n', '<leader>q', ':qa!<CR>')
+-- map('n', '<leader>q', ':qa!<CR>')
 
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
@@ -63,11 +63,11 @@ map('t', '<Esc>', '<C-\\><C-n>')                    -- exit
 
 -- NvimTree
 map('n', '<C-n>', ':NvimTreeToggle<CR>')            -- open/close
-map('n', '<leader>f', ':NvimTreeRefresh<CR>')       -- refresh
-map('n', '<leader>n', ':NvimTreeFindFile<CR>')      -- search file
+-- map('n', '<leader>f', ':NvimTreeRefresh<CR>')       -- refresh
+map('n', '<C-`>', ':NvimTreeFindFile<CR>')      -- search file
 
 -- Tagbar
-map('n', '<leader>z', ':TagbarToggle<CR>')          -- open/close
+-- map('n', '<leader>z', ':TagbarToggle<CR>')          -- open/close
 
 -- Hop
 map('n', '<C-e>', ':HopWord<CR>')          -- open/close
