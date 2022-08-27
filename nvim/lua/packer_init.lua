@@ -177,8 +177,16 @@ return packer.startup(function(use)
     end
   }
 
+  -- GOlang
+  use { 'fatih/vim-go'}
+
+
   -- Diff view
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
+
+  -- Gruvbox
+  use {'morhetz/gruvbox'}
 
 
   -- Automatically set up your configuration after cloning packer.nvim

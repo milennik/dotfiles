@@ -28,7 +28,7 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/default.png fill
-output * bg /home/nikola/Pictures/river.jpg fill
+output * bg /home/nikola/Pictures/fuji.png fill
 #
 # Example configuration:
 #
@@ -63,7 +63,7 @@ output DVI-D-2 resolution 1920x1080 position 1920,0
 
 # Swap CapsLock and Escape
 input type:keyboard {
-    xkb_options caps:swapescape 
+    xkb_options caps:swapescape
 }
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
@@ -96,6 +96,10 @@ input type:keyboard {
     bindsym $mod+w exec --no-startup-id  brave-browser
     bindsym $mod+r exec  --no-startup-id  /usr/bin/thunar
     bindsym Print exec grim -g "$(slurp -d)" - | wl-copy
+
+    
+    bindsym $mod+Shift+b exec --no-startup-id  '/home/nikola/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox'
+    bindsym $mod+Shift+g exec --no-startup-id  '/home/nikola/.local/share/JetBrains/Toolbox/apps/Goland/ch-0/222.3739.57/bin/goland.sh'
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -237,7 +241,7 @@ bindsym $mod+Shift+r mode "resize"
 #         statusline #D8DEE9
 #         background #3B4252
 #         inactive_workspace #3B4252 #3B4252 #A3BE8C
-#         focused_statusline #D8DEE9 
+#         focused_statusline #D8DEE9
 #         focused_workspace #81A1C1 #81A1C1 #3B4252
 #     }
 # }
@@ -251,12 +255,12 @@ bar {
 # Define colors variables:
 set $darkbluetrans	#7aa2f7
 set $darkblue		#414868
-set $lightblue		#7dcfff 
+set $lightblue		#7dcfff
 set $urgentred		#f7768e
 set $white		#c0caf5
 set $black		#414868
 set $purple		#c0caf5
-set $darkgrey		#414868 
+set $darkgrey		#414868
 set $grey		#c0caf5
 set $mediumgrey		#c0caf5
 set $yellowbrown	#bb9af7
