@@ -23,6 +23,7 @@ map('', '<down>', '<nop>')
 map('', '<left>', '<nop>')
 map('', '<right>', '<nop>')
 
+map('n','<C-x>',':bw<CR>:bn<CR>')
 -- Map Esc to kk
 map('i', 'kk', '<Esc>')
 
