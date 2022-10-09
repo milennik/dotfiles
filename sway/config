@@ -65,6 +65,20 @@ output DVI-D-2 resolution 1920x1080 position 1920,0
 input type:keyboard {
     xkb_options caps:swapescape
 }
+
+set $gnome-schema org.gnome.desktop.interface
+
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Catppuccin-Frappe'
+    gsettings set $gnome-schema icon-theme 'Adwaita'
+    gsettings set $gnome-schema cursor-theme 'Adwaita'
+    # gsettings set $gnome-schema text-scaling-factor 1.25
+}
+
+
+
+
+
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
@@ -85,7 +99,7 @@ input type:keyboard {
     bindsym $mod+Shift+d exec --no-startup-id dmenu_run  -nb '#1a1b26' -sf '#1a1b26' -sb '#7aa2f7' -nf '#7aa2f7'
 
     bindsym $mod+Shift+t exec rofi -show window  -config ~/.config/rofi/themes/nord.rasi
-    bindsym $mod+Shift+e exec ~/.config/sway/scripts/powermenu
+    bindsym $mod+Shift+e  --no-startup-id  nnn
 
 # volume
 
@@ -97,7 +111,7 @@ input type:keyboard {
     bindsym $mod+r exec  --no-startup-id  /usr/bin/thunar
     bindsym Print exec grim -g "$(slurp -d)" - | wl-copy
 
-    
+
     bindsym $mod+Shift+b exec --no-startup-id  '/home/nikola/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox'
     bindsym $mod+Shift+g exec --no-startup-id  '/home/nikola/.local/share/JetBrains/Toolbox/apps/Goland/ch-0/222.3739.57/bin/goland.sh'
 
