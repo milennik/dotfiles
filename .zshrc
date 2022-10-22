@@ -11,7 +11,7 @@ then
 fi
 export PATH
 
-export EDITOR='lvim' 
+export EDITOR='hx'
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export REVIEW_BASE=master
 unset rc
@@ -118,13 +118,11 @@ alias ll='exa -al --color=always --group-directories-first'
 
 alias su='sudo -i'
 alias h='hx .'
-alias v='nvim .'
+alias v='/usr/bin/nvim .'
 alias vi='nvim'
-alias l='lvim .'
-alias li='lvim'
 alias e='nvim .'
-alias en='nvim'
-alias vi='nvim'
+alias en='/usr/bin/nvim'
+alias vi='/usr/bin/nvim'
 alias ll='exa -al --color=always --group-directories-first'
 alias ls='ls --color -a'
 alias grep='grep --color=auto'
@@ -133,7 +131,9 @@ alias fgrep='fgrep --color=auto'
 alias df='df -h'
 alias cz="cz commit"
 alias p='python3 '
-
+alias jbt='/home/nikola/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox'
+alias gl='/home/nikola/.local/share/JetBrains/Toolbox/apps/Goland/ch-0/222.3739.57/bin/goland.sh'
+alias cc='/home/nikola/scripts/commit_helpper.sh'
 n ()
 {
     # Block nesting of nnn in subshells
@@ -187,3 +187,13 @@ extract () {
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+alias luamake=/home/nikola/install/lua-language-server/3rd/luamake/luamake
+export PATH="${HOME}/.config/lsp/lua-language-server/bin:${PATH}"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
+
+source <(kubectl completion zsh)
+
+source /home/nikola/.config/broot/launcher/bash/br
