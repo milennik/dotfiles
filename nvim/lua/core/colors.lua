@@ -68,4 +68,16 @@ M.rose_pine = {
   red = '#ebbcba',
 }
 
+M.catppuccin = {
+  bg = '#1e1e2e', --default: #191724
+  fg = '#cdd6f4',
+  pink = '#f5c2e7',
+  green = '#a6e3a1',
+  cyan = '#89b4fa',
+  yellow = '#f9e2af',
+  orange = '#fab387',
+  red = '#f38ba8',
+}
+
+
 return M

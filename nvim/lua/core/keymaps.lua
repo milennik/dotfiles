@@ -83,7 +83,7 @@ map('n', '<C-c>', ":let @* = fnamemodify(expand('%'), ':~:.')<cr>")
 
 -- Git diff
 map('n', '<C-y>', ":lua require('gitdiff').diff('master')<cr>")
-map('n', '<C-[>', ":lua require('gitdiff').diff()<cr>")
+-- map('n', '<C-[>', ":lua require('gitdiff').diff()<cr>")
 map('n', '<C-p>', ":Gvdiffsplit master<cr>")
 
 -- Telescope

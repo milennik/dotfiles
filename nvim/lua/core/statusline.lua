@@ -17,7 +17,8 @@ if not status_ok then
 end
 
 -- Set colorscheme (from core/colors.lua/colorscheme_name)
-local colors = require('core/colors').rose_pine
+-- local colors = require('core/colors').rose_pine
+local colors = require('core/colors').catppuccin
 
 local vi_mode_colors = {
   NORMAL = colors.cyan,
