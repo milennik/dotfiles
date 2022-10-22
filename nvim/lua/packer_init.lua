@@ -185,6 +185,11 @@ return packer.startup(function(use)
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
 
+  -- Preview markdown
+  use {"ellisonleao/glow.nvim"}
+
+
+
   -- Gruvbox
   use {'morhetz/gruvbox'}
 
