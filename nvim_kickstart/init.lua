@@ -194,7 +194,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "J", "mzJ`z")
 -- Hop
 vim.keymap.set("n", '<C-e>', ":HopWord<CR>")   
-
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 
 -- Remap for dealing with word wrap
