@@ -400,7 +400,8 @@ nmap('gy', ":lua require('telescope.builtin').git_branches()<cr>")
 nmap('gt', ":lua require('telescope.builtin').git_status()<cr>")
 nmap('gh', ":lua require('telescope.builtin').git_stash()<cr>")
 
-
+-- lsp formt
+nmap('<leader>f', ":lua vim.lsp.buf.format()<cr>")
 
   -- Create a command `:Format` local to the LSP buffer
   vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
@@ -465,9 +466,6 @@ require('lspconfig').sumneko_lua.setup {
     },
   },
 }
-
--- gopls format on save
-require("lspconfig").gopls.setup { on_attach = require("lsp-format").on_attach }
 
 
 -- nvim-cmp setup
