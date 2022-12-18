@@ -68,6 +68,9 @@ require('packer').startup(function(use)
     end
   }
 
+  -- lsp format
+  use {'lukas-reineke/lsp-format.nvim'}
+
   -- Git diff
   use { "milennik/gitdiff.nvim" }
 
@@ -462,6 +465,10 @@ require('lspconfig').sumneko_lua.setup {
     },
   },
 }
+
+-- gopls format on save
+require("lspconfig").gopls.setup { on_attach = require("lsp-format").on_attach }
+
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
