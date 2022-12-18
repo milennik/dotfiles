@@ -74,6 +74,19 @@ require('packer').startup(function(use)
   -- Git diff
   use { "milennik/gitdiff.nvim" }
 
+  -- CSV rainbow
+  use  { "mechatroner/rainbow_csv" }
+
+  -- Show hex colors
+  use {
+    'NvChad/nvim-colorizer.lua',
+    config = function()
+        require('colorizer').setup()
+    end
+  }
+  -- Catppuccin
+  use { "catppuccin/nvim", as = "catppuccin" }
+
   -- Add custom plugins to packer from /nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
   if has_plugins then
@@ -136,7 +149,7 @@ vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd [[colorscheme onedark]]
+vim.cmd [[colorscheme catppuccin]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -220,7 +233,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 require('lualine').setup {
   options = {
     icons_enabled = false,
-    theme = 'onedark',
+    theme = 'catppuccin',
     component_separators = '|',
     section_separators = '',
   },
